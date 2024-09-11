@@ -19,7 +19,7 @@
                 @enderror
               </div>
                <div class="form-group">
-                <fieldset>
+                 <fieldset>
                     <legend>Choices</legend>
                     <small id="choicesHelp" class="form-text text-muted">Give a choices that more insights into your question.</small>
                     <div>
@@ -32,9 +32,9 @@
                             @error('answers.0.answer')
                             <small class="text-danger">{{$message}}</small>
                             @enderror
-                          </div>
+                        </div>
                     </div>
-                    <div>
+             <div>
                         <div class="form-group">
                             <label  for="answer 2">Choice 2</label>
                             <input name="answers[][answer]" type="text" class="form-control"

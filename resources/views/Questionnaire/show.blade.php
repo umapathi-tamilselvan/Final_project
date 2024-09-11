@@ -21,7 +21,7 @@
                     @foreach ($question->answers as $answer )
                     <li class="list-group-item">{{$answer->answer}}</li>
 
-                    @endforeach
+                 @endforeach
 
                       </ul>
 
