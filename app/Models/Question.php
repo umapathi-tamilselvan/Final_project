@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Answer;
-use App\Models\Questionnaire;
 use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model

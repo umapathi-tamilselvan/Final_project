@@ -2,11 +2,8 @@
 
 namespace App\Models;
 
-use App\Models\User;
-use App\Models\Survey;
-use App\Models\Question;
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Questionnaire extends Model
 {
@@ -14,11 +11,13 @@ class Questionnaire extends Model
 
     protected $guarded = [];
 
-
-    public function path(){
+    public function path()
+    {
         return url('/questionnaires/'.$this->id);
     }
-    public function publicPath(){
+
+    public function publicPath()
+    {
         return url('/surveys/'.$this->id.'-'.Str::slug($this->title));
     }
 

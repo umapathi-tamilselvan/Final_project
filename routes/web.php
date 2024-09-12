@@ -25,11 +25,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 Route::get('/questionnaires/create', [QuestionnaireController::class, 'create']);
 Route::post('/questionnaires', [QuestionnaireController::class, 'store']);
 Route::get('/questionnaires/{questionnaire}', [QuestionnaireController::class, 'show']);
+
 Route::get('/questionnaires/{questionnaire}/questions/create', [QuestionController::class, 'create']);
 Route::post('/questionnaires/{questionnaire}/questions', [QuestionController::class, 'store']);
 Route::delete('/questionnaires/{questionnaire}/questions/{question}', [QuestionController::class, 'destroy']);
+
 Route::get('/surveys/{questionnaire}-{slug}', [SurveyController::class, 'show']);
 Route::post('/surveys/{questionnaire}-{slug}', [SurveyController::class, 'store']);

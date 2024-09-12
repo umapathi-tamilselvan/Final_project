@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Question;
 use App\Models\Questionnaire;
 
 class QuestionnaireController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -38,5 +36,4 @@ class QuestionnaireController extends Controller
         return view('Questionnaire.show', compact('questionnaire'));
 
     }
-   
 }

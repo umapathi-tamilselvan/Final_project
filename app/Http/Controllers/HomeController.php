@@ -22,8 +22,9 @@ class HomeController extends Controller
     public function index()
     {
         // auth()->user();
-        $questionnaires=auth()->user()->questionnaires;
-      //  dd($questionnaires);
-        return view('home',compact('questionnaires'));
+        $questionnaires = auth()->user()->questionnaires;
+
+        //  dd($questionnaires);
+        return view('home', compact('questionnaires'));
     }
 }
