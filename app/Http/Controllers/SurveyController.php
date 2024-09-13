@@ -24,7 +24,7 @@ class SurveyController extends Controller
         $survey = $questionnaire->surveys()->create($data['survey']);
         $survey->responses()->createMany($data['responses']);
 
-        return 'Thank You!';
+        return redirect()->route('questionnaire.show', $questionnaire->id)->with('Thank You!');
 
     }
 }
